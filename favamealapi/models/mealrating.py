@@ -7,7 +7,7 @@ class MealRating(models.Model):
     Holds the rating a user has given a meal
     """
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="mealrating")
+        User, on_delete=models.CASCADE, related_name="mealrating_user")
     meal = models.ForeignKey(
-        "Meal", on_delete=models.CASCADE, related_name="mealrating")
+        "Meal", on_delete=models.CASCADE, related_name="mealrating_meal")
     rating = models.IntegerField()
